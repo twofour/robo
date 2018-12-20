@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+apk add --no-cache \
+    php7-phar \
+    php7-mbstring \
+    php7-json \
+    php7-curl
+
+wget https://github.com/consolidation/Robo/releases/download/$ROBO_VERSION/robo.phar -O /usr/local/bin/robo
+chmod +x /usr/local/bin/robo
